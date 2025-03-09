@@ -123,126 +123,107 @@
         background: rgba(161, 161, 170, 1);
     }
 }
-}
+}}}
 
-    //   API 
-    .table {
-        flex: 1;
-        padding: 10px;
-        .table-header {
-        padding: 10px;
-        border-bottom: 1px solid #444;
-        color: rgba(161, 161, 170, 1);
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 130%;
-        letter-spacing: 0.1px;
-        }
-        .tree-node {
-        position: relative;
-        &.level-0 > .row {
-        padding-left: 10px;
-        }
-        &.level-1 > .row {
-        padding-left: 30px;
-        }
-        &.level-2 > .row {
-        padding-left: 50px;
-        }
-        }
-        .child-row {
-        position: relative;
-        // Vertical line for children
-        &::before {
-        content: '';
-        position: absolute;
-        left: 15px;
-        top: 0;
-        bottom: 0;
-        width: 1px;
-        background-color: #444;
-        }
-        // Horizontal line connecting to the parent
-        &::after {
-        content: '';
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        width: 15px;
-        height: 1px;
-        background-color: #444;
-        }
-        &.last-child::before {
-        bottom: 50%;
-        }
-        }
-        .row {
-        padding: 5px 10px;
-        border-bottom: 1px solid #444;
-        &:hover .actions {
-        visibility: visible;
-        }
-        .level {
-        display: flex;
-        align-items: center;
-        }
-        .folder-icon {
-        width: 20px;
-        height: 20px;
-        }
-        input {
-        background-color: #2a2a2a;
-        color: #fff;
-        border: 1px solid #444;
-        padding: 5px;
-        }
-        .actions {
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        .action-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        margin-left: 5px;
-        &:hover {
-        opacity: 0.8;
-        }
-        }
-        .delete-icon {
-        width: 16px;
-        height: 16px;
-        }
-        }
-        }
-    }}}
-
-
-// Table
-table {
+// API 
+.table {
     color: rgba(161, 161, 170, 1);
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
     letter-spacing: 0.1px;
-}
+    white-space: nowrap;
+  
+    .table-header {
+      position: relative;
+      background-color: rgba(32, 33, 36, 1);
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: #444;
+      }
+  
+      &.table-grid {
+        display: grid;
+        grid-template-columns: 110px 757px 200px 200px 200px 200px;
+      }
+  
+      .header-cell {
+        text-align: left;
+  
+        &.header-level {
+          padding: 11px 42px 12px 22px;
+        }
+  
+        &.header-name {
+          padding: 11px 603px 13px 0;
+        }
+  
+        &.header-salary {
+          padding: 11px 98px 12px 0;
+        }
+  
+        &.header-equipment {
+          padding: 11px 91px 13px 0;
+        }
+  
+        &.header-overheads {
+          padding: 11px 50px 12px 0;
+        }
+  
+        &.header-profit {
+          padding: 11px 0 12px 0;
+        }
+      }
+    }
+  }
+  
+  /* Общие стили для всех ячеек */
+  .cell {
+    display: inline-block;
+    border-radius: 6px;
+    background-color: rgba(32, 33, 36, 1);
+    color: rgba(113, 113, 122, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.1px;
+    border: 1px solid rgba(65, 65, 68, 1);
+    max-height: 36px;
+    box-sizing: border-box;
+    margin-top: 23px;
+    padding: 10px;
+    text-align: left;
 
-.header-level {
-    padding: 0 42px 12px 12px;
-}
-.header-name {
-    padding: 0 603px 12px 12px;
-}
-.header-salary {
-    padding: 0 98px 12px 12px;
-}
-.header-equipment {
-    padding: 0 91px 12px 12px;
-}
-.header-overheads {
-    padding: 0 50px 12px 12px;
-}
-.header-profit {
-    padding: 0 0 12px 12px;
-}
+      
+    /* Стили для конкретных типов ячеек */
+    &-name {
+      width: 733px;
+      height: 36px;
+    }
+  
+    &-salary {
+      width: 176px;
+      height: 36px;
+    }
+  
+    &-equipment {
+      width: 176px;
+      height: 36px;
+    }
+  
+    &-overheads {
+      width: 176px;
+      height: 36px;
+    }
+  
+    &-profit {
+      width: 176px;
+      height: 36px;
+    }
+  }

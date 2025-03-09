@@ -83,8 +83,7 @@ const RowItem: React.FC<{
         className="row"
         style={{
           display: "grid",
-          gridTemplateColumns: "50px 733px 176px 176px 176px 176px",
-          gap: "24px",
+          gridTemplateColumns: "110px 757px 200px 200px 200px 200px",
         }}
       >
         <span className="level">
@@ -119,9 +118,7 @@ const RowItem: React.FC<{
               type="number"
               className="cell cell-equipment cell-input"
               value={editedRow.equipmentCosts}
-              onChange={(e) =>
-                handleChange("equipmentCosts", Number(e.target.value))
-              }
+              onChange={(e) => handleChange("equipmentCosts", Number(e.target.value))}
               onKeyPress={handleKeyPress}
             />
             <input
@@ -135,21 +132,19 @@ const RowItem: React.FC<{
               type="number"
               className="cell cell-profit cell-input"
               value={editedRow.estimatedProfit}
-              onChange={(e) =>
-                handleChange("estimatedProfit", Number(e.target.value))
-              }
+              onChange={(e) => handleChange("estimatedProfit", Number(e.target.value))}
               onKeyPress={handleKeyPress}
             />
           </>
         ) : (
           <>
-            <span className="cell cell-name" onDoubleClick={handleDoubleClick}>
+            <span className="cell cell-name cell-display cell-clickable" onDoubleClick={handleDoubleClick}>
               {row.name || "Без названия"}
             </span>
-            <span className="cell cell-salary">{row.salary}</span>
-            <span className="cell cell-equipment">{row.equipmentCosts}</span>
-            <span className="cell cell-overheads">{row.overheads}</span>
-            <span className="cell cell-profit">{row.estimatedProfit}</span>
+            <span className="cell cell-salary cell-display">{row.salary}</span>
+            <span className="cell cell-equipment cell-display">{row.equipmentCosts}</span>
+            <span className="cell cell-overheads cell-display">{row.overheads}</span>
+            <span className="cell cell-profit cell-display">{row.estimatedProfit}</span>
           </>
         )}
         <div className="actions">
