@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Roboto", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+// Header
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #202124;
+
+    .header {
+        display: flex;
+        align-items: center;
+        background: #2a2a2a;
+        color: #fff;
+        border-bottom: 1px solid rgba(65, 65, 68, 1);
+        height: 44px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+    .cube {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .arrow {
+        padding: 10px 31px 10px 0;
+    }
+
+    .watch {
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        border-bottom: 2px solid rgba(255, 255, 255, 1);
+        padding: 13px 0px 14px 0px;
+    }
+
+    .control {
+        color: rgba(161, 161, 170, 1);
+        padding: 13px 0 15px 28px;
+    }
+}
+
+// Nav
+    .horizontal-nav {
+        background: #2a2a2a;
+        border-bottom: 1px solid rgba(65, 65, 68, 1);
+        height: 46px;
+
+    .header-menu {
+        display: flex;
+
+.project-name {
+    color: rgba(161, 161, 170, 1);
+    border-right: 1px solid rgba(65, 65, 68, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 10px 93px 5px 20px;
+}
+
+#up {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    padding: 0px 8px 10px 62px;
+}
+
+.abbreviation {
+    padding: 0px 0px 8px 0px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.cmp {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+    padding: 11px 15px 0px 15px;
+    border-right: 1px solid rgba(65, 65, 68, 1);
+    margin: 0;
+}
+}
+}
+//   Aside
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+
+.sidebar {
+    background: #2a2a2a;
+    color: #fff;
+    border-right: 1px solid #444;
+    overflow-y: auto;
+    width: 230px;
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+
+    img {
+        padding: 5px 20px 4px 5px ;
+        width: 22px;
+        height: 22px;
+        }
+
+    &:hover {
+        background: #3a3a3a;
+    }
+
+    &.active {
+        background: rgba(161, 161, 170, 1);
+    }
+}
+}
+
+    //   API 
+    .table {
+        flex: 1;
+        padding: 10px;
+        .table-header {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        color: rgba(161, 161, 170, 1);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0.1px;
+        }
+        .tree-node {
+        position: relative;
+        &.level-0 > .row {
+        padding-left: 10px;
+        }
+        &.level-1 > .row {
+        padding-left: 30px;
+        }
+        &.level-2 > .row {
+        padding-left: 50px;
+        }
+        }
+        .child-row {
+        position: relative;
+        // Vertical line for children
+        &::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #444;
+        }
+        // Horizontal line connecting to the parent
+        &::after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        width: 15px;
+        height: 1px;
+        background-color: #444;
+        }
+        &.last-child::before {
+        bottom: 50%;
+        }
+        }
+        .row {
+        padding: 5px 10px;
+        border-bottom: 1px solid #444;
+        &:hover .actions {
+        visibility: visible;
+        }
+        .level {
+        display: flex;
+        align-items: center;
+        }
+        .folder-icon {
+        width: 20px;
+        height: 20px;
+        }
+        input {
+        background-color: #2a2a2a;
+        color: #fff;
+        border: 1px solid #444;
+        padding: 5px;
+        }
+        .actions {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 5px;
+        &:hover {
+        opacity: 0.8;
+        }
+        }
+        .delete-icon {
+        width: 16px;
+        height: 16px;
+        }
+        }
+        }
+    }}}
+
+
+// Table
+table {
+    color: rgba(161, 161, 170, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.1px;
+}
+
+.header-level {
+    padding: 0 42px 12px 12px;
+}
+.header-name {
+    padding: 0 603px 12px 12px;
+}
+.header-salary {
+    padding: 0 98px 12px 12px;
+}
+.header-equipment {
+    padding: 0 91px 12px 12px;
+}
+.header-overheads {
+    padding: 0 50px 12px 12px;
+}
+.header-profit {
+    padding: 0 0 12px 12px;
+}
