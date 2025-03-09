@@ -408,10 +408,10 @@ const App: React.FC = () => {
     <div className="app">
       <header className="header">
         <div className="cube">
-          <img src="/img/cube.png" alt="cube" />
+          <img src="./img/cube.png" alt="cube" />
         </div>
         <div className="arrow">
-          <img src="/img/arrow.png" alt="arrow" />
+          <img src="./img/arrow.png" alt="arrow" />
         </div>
         <div className="watch">Просмотр</div>
         <div className="control">Управление</div>
@@ -422,7 +422,7 @@ const App: React.FC = () => {
           <div className="project-name">
             Название проекта
             <span id="up">
-              <img src="/img/up.png" alt="up" />
+              <img src="./img/up.png" alt="up" />
             </span>
             <p className="abbreviation">Аббревиатура</p>
           </div>
@@ -438,7 +438,7 @@ const App: React.FC = () => {
               className={`sidebar-item ${activeNavItem === item ? "active" : ""}`}
               onClick={() => setActiveNavItem(item)}
             >
-              <img src="/img/restangle.png" alt="restangle" />
+              <img src="./img/restangle.png" alt="restangle" />
               {item}
             </div>
           ))}
